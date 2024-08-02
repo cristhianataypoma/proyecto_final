@@ -1,0 +1,223 @@
+/* Reseteo de márgenes y rellenos, fuente por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de la sección principal */
+.platos {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(img/chairs-2179044_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Estilo del menú de navegación */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+    height: auto;
+}
+
+.container-buscador {
+    width: 40%;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(191, 144, 43);
+    display: block;
+    margin: auto;
+    transition: width 0.3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li a:hover {
+    color: rgb(191, 144, 43);
+    background-color: #dcddb8;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* Estilo del encabezado */
+header {
+    font-size: 35px;
+    color: #b5a305;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Estilo del menú de platos */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.plato {
+    width: 300px;
+    background-color: rgb(181, 2, 2);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: zoomOutRight 1s;
+    border: 3px solid #FFD700;
+    transition: background 0.5s, border 0.5s;
+    cursor: pointer;
+}
+
+.plato img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.plato:hover {
+    background-color: rgb(167, 167, 5);
+    border: 4px solid red;
+}
+
+.plato h2 {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    animation: rotateIn 3s;
+}
+
+.plato p {
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.5; 
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: flipOutY 3s;
+}
+
+/* Estilo del botón para la carta */
+.Document {
+    width: 10%;
+    margin: auto;
+    color: white;
+    padding: 5px;
+    background: transparent;
+    text-align: center;
+    border: 2px solid transparent; 
+}
+
+.Document:hover {
+    background-color: rgb(167, 167, 5);
+    border-radius: 10px;
+}
+
+/* Estilo del contenedor de video */
+.vedio {
+    margin-top: 30px;
+}
+
+/* Estilo del pie de página */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px; 
+    background-color: #861010;
+    color: white;
+    font-size: 1.1em;
+    position: relative; 
+    bottom: 0;
+}
+
+/* Estilo del título en el pie de página */
+.footer h4 {
+    margin: 6px 0;
+    font-size: 1.1em;
+}
+
+/* Estilo de los iconos sociales */
+.icons .fa-brands, .icons .fa-solid {
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    transition: transform 0.3s;
+}
+
+.icons .fa-brands:hover, .icons .fa-solid:hover {
+    transform: scale(1.2);
+    animation: tada 1s;
+}
+
+/* Estilos para el botón de flecha hacia arriba */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(158, 15, 15, 0.2);
+    text-decoration: none;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1); 
+}
+
+.scroll-to-top i {
+    pointer-events: none; 
+}

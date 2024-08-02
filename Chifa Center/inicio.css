@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-color:  #861010; 
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.container-buscador{
+    width: 40%;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3vw;
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(191, 144, 43);
+    display: block;
+    margin: auto;
+    transition: width 0.3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li a:hover {
+    color: rgb(191, 144, 43);
+    background-color: #dcddb8;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+
+.carousel-item{
+    max-height: 150vh;
+}
+
+.carousel-item::after{
+    content: "";
+    position: absolute;
+    top: 0dvb ;
+}
+
+/* Estilo del pie de página */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px; 
+    background-color: #861010;
+    color: white;
+    font-size: 1.1em;
+    position: relative; 
+    bottom: 0;
+}
+
+/* Estilo del título en el pie de página */
+.footer h4 {
+    margin: 6px 0;
+    font-size: 1.1em;
+}
+
+/* Estilo de los iconos sociales */
+.icons .fa-brands, .icons .fa-solid {
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    transition: transform 0.3s;
+}
+
+.icons .fa-brands:hover, .icons .fa-solid:hover {
+    transform: scale(1.2);
+    animation: tada 1s;
+}
+
+@media (max-width: 768px) {
+    .container-buscador {
+        width: 70%;
+    }
+
+    .nav_links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links ul li {
+        padding: 5px 0;
+    }
+
+    .historial p {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nosotros-col {
+        flex-basis: 90%;
+        margin: 20px 0;
+    }
+}
+
+
+/* Estilos para el botón de flecha hacia arriba */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    border: none;
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+.scroll-to-top i {
+    pointer-events: none; 
+}

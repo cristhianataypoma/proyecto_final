@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.Contacto{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),  url(img/chairs-2179044_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.container-buscador{
+    width: 40%;
+}
+
+.nav_links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav_links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav_links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3vw;
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav_links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(191, 144, 43);
+    display: block;
+    margin: auto;
+    transition: width 0.3s;
+}
+
+.nav_links ul li:hover::after {
+    width: 100%;
+}
+
+.nav_links ul li a:hover {
+    color: rgb(191, 144, 43);
+    background-color: #dcddb8;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+}
+.map {
+    width: 100%;
+    flex: 1;
+    margin-right: 20px;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    margin-right: 20px;
+}
+.contact-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 40%;
+}
+.contact-form input, .contact-form textarea{
+    margin-bottom: 5px;
+    padding: 6px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #861010;
+    color: white;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #7a4f0a;
+}
+
+
+/* Estilo del pie de página */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px; 
+    background-color: #861010;
+    color: white;
+    font-size: 1.1em;
+    position: relative; 
+    bottom: 0;
+}
+
+/* Estilo del título en el pie de página */
+.footer h4 {
+    margin: 6px 0;
+    font-size: 1.1em;
+}
+
+/* Estilo de los iconos sociales */
+.icons .fa-brands, .icons .fa-solid {
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    transition: transform 0.3s;
+}
+
+.icons .fa-brands:hover, .icons .fa-solid:hover {
+    transform: scale(1.2);
+    animation: tada 1s;
+}
+
+@media (max-width: 768px) {
+    .container-buscador {
+        width: 70%;
+    }
+
+    .nav_links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_links ul li {
+        padding: 5px 0;
+    }
+
+    .historial p {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nosotros-col {
+        flex-basis: 90%;
+        margin: 20px 0;
+    }
+}
+
+
+/* Estilos para el botón de flecha hacia arriba */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    border: none;
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1); 
+}
+
+.scroll-to-top i {
+    pointer-events: none; 
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map,
+    .contact-form {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .map {
+        order: 1;
+    }
+
+    .contact-form {
+        order: 2;
+    }
+}
